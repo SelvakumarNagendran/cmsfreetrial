@@ -28,7 +28,23 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"4bd2ba109c",applicationID:"605057051",sa:1}
 </script>
 		
-		
+	<script>
+		function loadjscssfile(filename, filetype){
+		    if (filetype=="js"){ //if filename is a external JavaScript file
+			var fileref=document.createElement('script')
+			fileref.setAttribute("type","text/javascript")
+			fileref.setAttribute("src", filename)
+		    }
+		    else if (filetype=="css"){ //if filename is an external CSS file
+			var fileref=document.createElement("link")
+			fileref.setAttribute("rel", "stylesheet")
+			fileref.setAttribute("type", "text/css")
+			fileref.setAttribute("href", filename)
+		    }
+		    if (typeof fileref!="undefined")
+			document.getElementsByTagName("head")[0].appendChild(fileref)
+		}
+	</script>		
 		
 		<title>Start your FREE trial at Ancestry</title>
 <meta name="description" content="Explore the world's largest online family history resource risk free! Begin your discovery today; you'll only be billed after your trial period.">
@@ -549,28 +565,13 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 		  server : "", // omniture s.server
 		  user_sub_status : "" // omniture prop23 / GA custom var 1
 		}
+		loadjscssfile("https://www.ancestrycdn.com/ui-static/lib/tracking/9/tracking.js", "js")
+	
 	</script>
 	
 	<!-- <script type="text/javascript" async defer src="https://www.ancestrycdn.com/ui-static/lib/tracking/9/tracking.js"></script> -->
-	<script>
-		function loadjscssfile(filename, filetype){
-		    if (filetype=="js"){ //if filename is a external JavaScript file
-			var fileref=document.createElement('script')
-			fileref.setAttribute("type","text/javascript")
-			fileref.setAttribute("src", filename)
-		    }
-		    else if (filetype=="css"){ //if filename is an external CSS file
-			var fileref=document.createElement("link")
-			fileref.setAttribute("rel", "stylesheet")
-			fileref.setAttribute("type", "text/css")
-			fileref.setAttribute("href", filename)
-		    }
-		    if (typeof fileref!="undefined")
-			document.getElementsByTagName("head")[0].appendChild(fileref)
-		}
-	</script>
+
 	
-	loadjscssfile("https://www.ancestrycdn.com/ui-static/lib/tracking/9/tracking.js", "js")
 		
 		<!--
 			
